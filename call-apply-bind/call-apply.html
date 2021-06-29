@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call and apply</title>
+</head>
+<body>
+    <script>
+        const person = {
+    firstName:'swapno',
+    lastName:'mondol',
+    age:11,
+    salary:50000,
+    payBill: (tips,taxt) =>{
+      return this.salary -tips - taxt
+    }
+}
+
+const heroPerson = {
+    name:'shakib',
+    salary:90000,
+}
+
+// person.payBill.call(heroPerson,5000,300) //in call we ceparate parameter by comma
+person.payBill.apply(heroPerson,[5000,300])
+console.log(heroPerson);
+    </script>
+</body>
+</html>
